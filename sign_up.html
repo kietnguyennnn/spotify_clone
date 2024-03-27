@@ -23,15 +23,88 @@
             <div class="header lato-thin">
                 <h2>Đăng kí để bắt đầu nghe </h2>
             </div>
-            <form novalidate class="form_sign_up">
+            <form id="email-form" novalidate class="form_sign_up">
                 <div class="form">
                     <label for="username" data-encore-id="text">Địa chỉ email</label>
                     <div>
                         <input aria-invalid="false" required="" aria-errormessage="username-error-message" id="username" type="email" name="username" placeholder="name@gmail.com" autocomplete="username" data-encore-id="formInput" class="input_mail" value="">
+                        <div id="username-error-message" style="display:none; color:red;"></div>
+                        <button type="submit">Tiếp tục</button>
                     </div>
+
                 </div>
             </form>
+            <hr>
+            <p style="text-align: center;">hoặc</p>
+                <div class="social-login">
+                <div class="nut">
+                    <button class="social-btn google-btn">
+                        <img src="./images/Facebook_Logo_(2019).png" alt="Google">
+                        <p style="  margin-left: 25px;font-weight: 700;">Đăng ký bằng Google</p> 
+                    </button>
+                </div>
+
+                <div>
+                    <button class="social-btn facebook-btn">
+                        <img src="./images/Google_Logo.png" alt="Facebook">
+                        <p style="margin-left: 25px;font-weight: 700;">Đăng ký bằng Facebook</p>
+                    </button>
+                </div>
+                
+                </div>
+                <hr>
+                <p style="color: bisque;text-align: center;">Bạn đã có tài khoản? <a href="#">Đăng nhập tại đây</a></p>
         </div>
     </div>
+
+    <script>
+        document.getElementById("email-form").addEventListener("submit", function(event) {
+          var input = document.getElementById("username");
+          var errorMessage = document.getElementById("username-error-message");
+          if (!input.validity.valid) {
+            event.preventDefault(); // Ngăn chặn việc submit form
+            input.classList.add("error");
+            errorMessage.textContent = "Email này không hợp lệ. Hãy đảm bảo rằng email được nhập dưới dạng example@email.com";
+            errorMessage.style.display = "block";
+          } else {
+            input.classList.remove("error");
+            errorMessage.style.display = "none";
+          }
+        });
+
+        const googleButton = document.querySelector('.google-btn');
+
+        googleButton.addEventListener('click', () => {
+        const googleAuthProvider = new firebase.auth.GoogleAuthProvider();
+        firebase.auth().signInWithPopup(googleAuthProvider)
+            .then((result) => {
+            // Xử lý sau khi đăng nhập thành công với Google
+            const user = result.user;
+            console.log('Đăng nhập thành công với Google:', user);
+            })
+            .catch((error) => {
+            // Xử lý lỗi
+            console.error('Lỗi đăng nhập với Google:', error);
+            });
+        });
+
+        // Facebook OAuth
+        const facebookButton = document.querySelector('.facebook-btn');
+
+        facebookButton.addEventListener('click', () => {
+        const facebookAuthProvider = new firebase.auth.FacebookAuthProvider();
+        firebase.auth().signInWithPopup(facebookAuthProvider)
+            .then((result) => {
+            // Xử lý sau khi đăng nhập thành công với Facebook
+            const user = result.user;
+            console.log('Đăng nhập thành công với Facebook:', user);
+            })
+            .catch((error) => {
+            // Xử lý lỗi
+            console.error('Lỗi đăng nhập với Facebook:', error);
+            });
+        });
+        </script>
+        
 </body>
 </html>

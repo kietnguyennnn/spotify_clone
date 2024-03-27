@@ -4,6 +4,7 @@
     background-color: black;
     color: aliceblue;
     font-family: CircularSpTitle, CircularSpTitle-Tall, CircularSp-Arab, CircularSp-Hebr, CircularSp-Cyrl, CircularSp-Grek, CircularSp-Deva,;
+    box-sizing: border-box;
 }
 .lato-thin {
     font-family: "Lato", sans-serif;
@@ -17,8 +18,9 @@
     width: 100%;
     height: 200px;
 }
- img{
-    width: 15%;
+.logo img{
+    width: 10%;
+    color: #fff;
     
 }
 .content{
@@ -31,7 +33,7 @@
     padding-bottom: 0px;
 }
 .sign_up{
-    width: 400px;
+    width: 300px;
 }
 .header{
     padding-bottom: 30px;
@@ -41,4 +43,76 @@
     padding: 4px 10px;
     width: 100%;
     height: 40px;
+    border-radius: 10px;
+}
+.error {
+    border: 2px solid red;
+  }
+
+button[type="submit"] {
+    background-color:  #1ED760; /* Màu xanh */
+    color: black; /* Màu chữ trắng */
+    padding: 10px 20px; /* Kích thước padding */
+    border: none; /* Loại bỏ viền */
+    border-radius: 20px; /* Bo tròn góc */
+    font-size: 16px; /* Cỡ chữ */
+    cursor: pointer; /* Con trỏ khi di chuột */
+    display: block; /* Hiển thị thành block để căn giữa */
+    margin: 0 auto;
+    width: 300px;
+    margin-top: 10px;
+
+}
+
+button[type="submit"]:hover {
+    opacity: 0.9;
+}
+hr {
+    border: none;
+    border-top: 1px solid #ccc;
+    margin: 20px 0;
+  }
+  
+  .social-login {
+    display: flex; /* Hiển thị các nút theo kiểu flexbox */
+    flex-direction: column; /* Xếp các nút theo chiều dọc */
+    align-items: center; /* Căn giữa các phần tử theo trục ngang */
+    text-align: center;
+    margin-top: 15px;
+    
+}
+
+.social-login div {
+    margin-bottom: 10px; /* Khoảng cách giữa các hàng */
+}
+
+.social-btn {
+    display: flex; /* Hiển thị nút dưới dạng flexbox */
+    align-items: center; /* Căn giữa các phần tử theo trục ngang */
+
+    color: #fff; /* Màu chữ trắng */
+    border: none; /* Loại bỏ viền */
+    border-radius: 25px; /* Bo tròn góc */
+    padding: 10px; /* Kích thước padding */
+    cursor: pointer; /* Con trỏ khi di chuột */
+    font-size: 14px;
+    
+}
+
+.social-btn img {
+    width: 30px; /* Kích thước ảnh */
+    margin-right: 10px; /* Khoảng cách giữa ảnh và văn bản */
+}
+
+.google-btn,.facebook-btn{
+    border: 1px solid white;
+    width: 261px;
+    height: 60px;
+
+}
+.google-btn:hover,.facebook-btn:hover{
+    border: 1px solid rgb(29, 188, 199);
+}
+.nut{
+    text-align: center;
 }

@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title> 
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    
+    <link rel="stylesheet" href="test2.css">
+</head>
+<body>
+    <div class="min-h-screen bg-zinc-900 flex items-center justify-center p-4">
+        <div class="bg-zinc-800 text-white max-w-2xl mx-auto p-8 rounded-lg">
+          <div class="flex justify-between items-center mb-6">
+            <div class="flex items-center">
+                <button class="text-green-500" style="margin-right: 20px ;">❮</button>
+              <h2 class="text-lg">Step 2 of 3</h2>
+            </div>
+            <div>
+              
+            </div>
+          </div>
+          <h4 class="text-2xl font-bold mb-4">Tell us about yourself</h4>
+          <form>
+            <div class="mb-4">
+              <label for="name" class="block text-sm mb-2">Name </label>
+              <p class="Text__TextElement-sc-if376j-0 dAqVCw encore-text-body-small" data-encore-id="text" style="color: blanchedalmond;"><span class="sc-pyeOL bZBnSz">This name will appear on your profile</span></p>
+
+              <input
+                type="text"
+                id="name"
+                placeholder=""
+                class="w-full p-2 bg-zinc-700 rounded"
+                style="border: 1px solid Grey;"
+              />
+            </div>
+            <div class="mb-4">
+              <label for="dob" class="block text-sm mb-2">Date of birth</label>
+              <div class="flex gap-2">
+                <input type="text" id="dob-day" placeholder="dd" class="w-12 p-2 bg-zinc-700 rounded" />
+                <div data-encore-id="formSelect" class="SelectContainer-sc-wv4dj5-0 hqTOGG"></div>
+                <select id="month" name="month" required="" aria-invalid="false" autocomplete="bday-month" data-testid="birthDateMonth" class="Select-sc-3qvhho-0 dcTGIB" aria-errormessage="birthdate-error-invalid">
+                    <option value="" selected disabled>Month</option>
+
+                    <option value="1">January</option>
+                    <option value="2">February</option>
+                    <option value="3">March</option>
+                    <option value="4">April</option>
+                    <option value="5">May</option>
+                    <option value="6">June</option>
+                    <option value="7">July</option>
+                    <option value="8">August</option>
+                    <option value="9">September</option>
+                    <option value="10">October</option>
+                    <option value="11">November</option>
+                    <option value="12">December</option>
+                </select>
+                <input
+                  type="text"
+                  id="dob-year"
+                  placeholder="yyyy"
+                  class="w-20 p-2 bg-zinc-700 rounded"
+                />
+              </div>
+            </div>
+            <div class="mb-6">
+              <fieldset>
+                <legend class="block text-sm mb-2">Gender</legend>
+                <div class="flex items-center mb-1">
+                  <input type="radio" id="man" name="gender" class="mr-2" />
+                  <label for="man" class="text-sm">Man</label>
+                </div>
+                <div class="flex items-center mb-1">
+                  <input type="radio" id="woman" name="gender" class="mr-2" />
+                  <label for="woman" class="text-sm">Woman</label>
+                </div>
+                <div class="flex items-center mb-1">
+                  <input type="radio" id="non-binary" name="gender" class="mr-2" />
+                  <label for="non-binary" class="text-sm">Non-binary</label>
+                </div>
+                <div class="flex items-center mb-1">
+                  <input type="radio" id="something-else" name="gender" class="mr-2" />
+                  <label for="something-else" class="text-sm">Something else</label>
+                </div>
+                <div class="flex items-center mb-1">
+                  <input type="radio" id="prefer-not-to-say" name="gender" class="mr-2" />
+                  <label for="prefer-not-to-say" class="text-sm">Prefer not to say</label>
+                </div>
+              </fieldset>
+            </div>
+            <button
+              type="submit"
+              class="w-full py-3 bg-green-500 rounded hover:bg-green-600 focus:outline-none focus:ring focus:ring-green-300"
+            >
+              Next
+            </button>
+          </form>
+        </div>
+      </div>
+      
+</body>
+</html>

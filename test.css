@@ -1,0 +1,12 @@
+*{
+    background-color: #121212;
+    color: aliceblue;
+}
+
+.content{
+    margin-top: -300px;
+}
+ul{
+    margin-left: 20px;
+    margin-bottom: 20px;
+}

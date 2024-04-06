@@ -8,55 +8,126 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap" rel="stylesheet">
+    
 
 </head>
 <body>
-    <nav class="nav">
-        <div class="logo">
-            <a href="">
-                <img src="./images/Spotify Logo.png" alt="Logo">
-            </a>
-        </div>
-    </nav>
-    <div class="content">
-        <div class="sign_up">
-            <div class="header lato-thin">
-                <h2>Đăng kí để bắt đầu nghe </h2>
+    <div class="container">
+        <nav class="nav ">
+            <div class="logo">
+                <a href="">
+                    <img src="./images/Spotify Logo.png" alt="Logo">
+                </a>
             </div>
-            <form id="email-form" novalidate class="form_sign_up">
-                <div class="form">
-                    <label for="username" data-encore-id="text">Địa chỉ email</label>
-                    <div>
-                        <input aria-invalid="false" required="" aria-errormessage="username-error-message" id="username" type="email" name="username" placeholder="name@gmail.com" autocomplete="username" data-encore-id="formInput" class="input_mail" value="">
-                        <div id="username-error-message" style="display:none; color:red;"></div>
-                        <button type="submit">Tiếp tục</button>
+        </nav>
+        <div class="content" id="su1">
+            <div class="sign_up">
+                <div class="header lato-thin">
+                    <h2>Đăng kí để bắt đầu nghe </h2>
+                </div>
+                <form id="email-form" novalidate class="form_sign_up">
+                    <div class="form">
+                        <label for="username" data-encore-id="text">Địa chỉ email</label>
+                        <div>
+                            <input aria-invalid="false" required="" aria-errormessage="username-error-message" id="username" type="email" name="username" placeholder="name@gmail.com" autocomplete="username" data-encore-id="formInput" class="input_mail" value="">
+                            <div id="username-error-message" style="display:none; color:red;"></div>
+                            <button id="btn1" type="submit">
+                                Tiếp tục </button>
+                        </div>
+
+                    </div>
+                </form>
+                <hr>
+                <p style="text-align: center;">hoặc</p>
+                    <div class="social-login">
+                    <div class="nut">
+                        <button class="social-btn google-btn">
+                            <img src="./images/Facebook_Logo_(2019).png" alt="Google">
+                            <p style="  margin-left: 25px;font-weight: 700;">Đăng ký bằng Google</p> 
+                        </button>
                     </div>
 
-                </div>
-            </form>
-            <hr>
-            <p style="text-align: center;">hoặc</p>
-                <div class="social-login">
-                <div class="nut">
-                    <button class="social-btn google-btn">
-                        <img src="./images/Facebook_Logo_(2019).png" alt="Google">
-                        <p style="  margin-left: 25px;font-weight: 700;">Đăng ký bằng Google</p> 
-                    </button>
-                </div>
-
-                <div>
-                    <button class="social-btn facebook-btn">
-                        <img src="./images/Google_Logo.png" alt="Facebook">
-                        <p style="margin-left: 25px;font-weight: 700;">Đăng ký bằng Facebook</p>
-                    </button>
-                </div>
-                
-                </div>
-                <hr>
-                <p style="color: bisque;text-align: center;">Bạn đã có tài khoản? <a href="#">Đăng nhập tại đây</a></p>
+                    <div>
+                        <button class="social-btn facebook-btn">
+                            <img src="./images/Google_Logo.png" alt="Facebook">
+                            <p style="margin-left: 25px;font-weight: 700;">Đăng ký bằng Facebook</p>
+                        </button>
+                    </div>
+                    
+                    </div>
+                    <hr>
+                    <p style="color: bisque;text-align: center;">Bạn đã có tài khoản? <a href="#">Đăng nhập tại đây</a></p>
+            </div>
         </div>
-    </div>
 
+
+        <!-- <div class="min-h-screen bg-zinc-900 flex items-center justify-center p-4" id="su2">
+            <div id="bar">
+                <div id="inabar"></div>
+            </div>
+            <div class="bg-zinc-800 p-6 rounded-lg max-w-sm w-full mx-auto content">
+            <div class="flex items-center justify-between pb-4">
+                <button class="text-zinc-400 focus:outline-none">
+                <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    class="h-6 w-6"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    stroke="currentColor"
+                >
+                    <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="M15 19l-7-7 7-7"
+                    />
+                </svg>
+                </button>
+                <span class="text-green-400">Bước 1/3</span>
+            </div>
+            <h2 class="text-green-400 text-lg mb-4">Tạo mật khẩu</h2>
+            <div class="mb-6">
+                <label for="password" class="block text-sm text-zinc-400 mb-2">Mật khẩu</label>
+                <div class="flex items-center border-2 border-zinc-600 rounded-lg px-3 py-2">
+                <input
+                    id="password"
+                    type="password"
+                    class="bg-transparent text-white w-full focus:outline-none"
+                    placeholder="••••••••"
+                />
+                <button class="text-zinc-400 focus:outline-none">
+                    <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    class="h-6 w-6"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    stroke="currentColor"
+                    
+                    >
+                    <path
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        stroke-width="2"
+                        d="M15.172 7l-6.364 6.364m0 0l6.364 6.364m-6.364-6.364H21"
+                    />
+                    </svg>
+                </button>
+                </div>
+            </div>
+            <ul style="list-style-type:disc">
+                <li>1 chữ cái</li>
+                <li>1 chữ số hoặc ký tự đặc biệt (ví dụ: # ? ! &)</li>
+                <li>10 ký tự</li>
+            </ul>
+            <button
+                class="w-full bg-green-500 text-white py-3 rounded-lg focus:outline-none hover:bg-green-600 btn2">
+            
+                Tiếp theo
+            </button>
+            </div>
+        </div> -->
+
+    </div>
     <script>
         document.getElementById("email-form").addEventListener("submit", function(event) {
           var input = document.getElementById("username");
@@ -104,6 +175,21 @@
             console.error('Lỗi đăng nhập với Facebook:', error);
             });
         });
+
+        //     btn1.onclick = function(){
+        //         suindex = 0;
+        //         suindex++;
+        //         su1.style.display ="none"
+        //         su2.style.display ="flex"
+        //         inabar.style.width=((suindex/2)*100)+"%"
+        //      }
+        //      btn2.onclick = function(){
+        //         suindex = 0;
+        //         suindex++;
+        //         su1.style.display ="none"
+        //         su2.style.display ="block"
+        //         inabar.style.width=((suindex/2)*100)+"%"
+        // }
         </script>
         
 </body>
